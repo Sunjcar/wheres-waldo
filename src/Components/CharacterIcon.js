@@ -1,5 +1,5 @@
 import { Icon } from "@mui/material"
-import { characterImg } from "../assets/characterImg"
+import { characterImg } from "../Images/characterImg"
 const CharacterIcon = ({ level, found }) => {
   return (
     <div className="flex flex-wrap justify-end item-center">
