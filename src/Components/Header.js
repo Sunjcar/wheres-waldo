@@ -1,84 +1,58 @@
-import React from 'react'
-import Waldo from '../Images/Waldo.jpg'
-import { Link } from 'react-router-dom'
-import { Box, AppBar, Toolbar, IconButton, Tooltip } from "@mui/material";
-import LeaderboardIcon from "@mui/icons-material/Leaderboard";
-import InfoIcon from "@mui/icons-material/Info";
-import HomeIcon from "@mui/icons-material/Home";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { IconButton, Tooltip } from "@mui/material"
+import InfoIcon from "@mui/icons-material/Info"
+import HomeIcon from "@mui/icons-material/Home"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import Waldo_Logo from "../assets/logo/waldo-logo.svg"
+import { Link } from "react-router-dom"
 
 const Header = ({ icon, timer, button }) => {
     return (
-        <div class='flex items-center justify-around gap-4 text-white'>
-            <h1 class='flex items-center gap-8'>
-                <div class='flex items-center'>
-                    <img src={Waldo} alt='Waldo' class='h-[10vh]' />
-                    <span class='text-blue-500 text-3xl'>Where's</span>
-                    <span class='text-red-500 text-3xl'>Waldo</span>
+        <header className="z-50 w-full bg-white shadow-sm ">
+            <div className="flex items-center justify-around">
+                <div className="flex justify-center">
+                    <Link to="/" className="flex items-center justify-center ">
+                        <img className="h-10 px-4 lg:h-16" src={Waldo_Logo} alt="waldo" />
+                        <h1 className="text-xl font-extrabold leading-none tracking-tight lg:text-4xl">
+                            <span className="text-blue-500">Where&apos;s </span>
+                            <span className="text-red-500">Waldo?</span>
+                        </h1>
+                    </Link>
                 </div>
-                <AppBar class='sticky'>
-                    <Toolbar
-                        sx={{
-                            height: 80,
-                            display: "flex",
-                            mx: 8,
-                            justifyContent: "space-between",
-                        }}
-                    >
-                        <Box
-                            sx={{ display: "flex", alignItems: "center" }}
-                            component={Link}
-                            to="/"
+                <div className="flex items-center justify-around">
+                    {icon}
+                    {timer}
+                    {button}
+                </div>
+                <div>
+                    <Tooltip title="Home">
+                        <IconButton color="info" component={Link} to="/">
+                            <HomeIcon sx={{ fontSize: 32 }} />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="About">
+                        <IconButton
+                            component="a"
+                            target="_blank"
+                            href="https://en.wikipedia.org/wiki/Where's_Wally%3F"
+                            color="info"
                         >
-                        </Box>
-                        <Box
-                            sx={{
-                                display: "flex",
-                                alignItems: "center",
-                                columnGap: "16px",
-                            }}
+                            <InfoIcon sx={{ fontSize: 32 }} />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Github">
+                        <IconButton
+                            component="a"
+                            target="_blank"
+                            href="https://github.com/sunjcar/"
+                            color="info"
                         >
-                            {icon}
-                            {timer}
-                            {button}
-                        </Box>
-                        <Box>
-                            <Tooltip title="Home">
-                                <IconButton color="info" component={Link} to="/">
-                                    <HomeIcon sx={{ fontSize: 40 }} />
-                                </IconButton>
-                            </Tooltip>
-                            <Tooltip title="Leaderboard">
-                                <IconButton color="info" component={Link} to="/leaderboard">
-                                    <LeaderboardIcon sx={{ fontSize: 40 }} />
-                                </IconButton>
-                            </Tooltip>
-                            <Tooltip title="About">
-                                <IconButton
-                                    component="a"
-                                    target="_blank"
-                                    href="https://en.wikipedia.org/wiki/Where's_Wally%3F"
-                                    color="info"
-                                >
-                                    <InfoIcon sx={{ fontSize: 40 }} />
-                                </IconButton>
-                            </Tooltip>
-                            <Tooltip title="Github">
-                                <IconButton
-                                    component="a"
-                                    target="_blank"
-                                    href="https://github.com/sunjcar"
-                                    color="info"
-                                >
-                                    <GitHubIcon sx={{ fontSize: 40 }} />
-                                </IconButton>
-                            </Tooltip>
-                        </Box>
-                    </Toolbar>
-                </AppBar>
-            </h1>
-        </div>
+                            <GitHubIcon sx={{ fontSize: 32 }} />
+                        </IconButton>
+                    </Tooltip>
+                </div>
+            </div>
+            <hr></hr>
+        </header>
     )
 }
-
 export default Header
