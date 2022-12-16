@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom"
-import { thumbnail } from "../Images/Levels"
+import { thumbnail } from "../Images/Thumbnail"
 import CharacterIcon from "./CharacterIcon"
 
 const LevelCard = ({ level }) => {

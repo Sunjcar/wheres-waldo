@@ -13,7 +13,7 @@ import {
   import databaseService from "../Database"
   import { compareScore } from "../Utils/Utils"
   import CharacterIcon from "./CharacterIcon"
-  import { PrimaryBtn, SecondaryBtn } from "./PrimaryBtn"
+  import { PrimaryBtn, SecondaryBtn } from "../Utils/BtnWrapper"
   
   const Leaderboard = ({ levels }) => {
     const navigate = useNavigate()

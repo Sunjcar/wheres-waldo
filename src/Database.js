@@ -12,7 +12,7 @@ import {
   
   const getlevelsData = async () => {
     const result = []
-    const snapShot = await getDocs(collection(db, "levelsData"))
+    const snapShot = await getDocs(collection(db, "levels"))
     snapShot.forEach(doc => {
       const name = doc.data().name
       const character = doc.data().character
@@ -27,7 +27,7 @@ import {
   
   const getCharacterLocations = async levelName => {
     let locations = []
-    const q = query(collection(db, "levelsData"), where("name", "==", levelName))
+    const q = query(collection(db, "levels"), where("name", "==", levelName))
     const snapShot = await getDocs(q)
     snapShot.forEach(doc => {
       locations = doc.data().solution

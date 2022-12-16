@@ -2,7 +2,7 @@ import { IconButton, Tooltip } from "@mui/material"
 import InfoIcon from "@mui/icons-material/Info"
 import HomeIcon from "@mui/icons-material/Home"
 import GitHubIcon from "@mui/icons-material/GitHub"
-import Waldo_Logo from "../assets/logo/waldo-logo.svg"
+import Waldo_Logo from "../Images/Waldo.jpg"
 import { Link } from "react-router-dom"
 
 const Header = ({ icon, timer, button }) => {

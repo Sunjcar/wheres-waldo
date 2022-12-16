@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { convertTime } from "../utils"
+import { convertTime } from "../Utils/Utils"
 
 const Timer = ({ gameStart, setGameTime }) => {
   const [time, setTime] = useState(0)

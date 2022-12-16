@@ -1,9 +1,9 @@
-import beach from "./Levels/beach_thumb.jpg"
-import snow from "./Levels/snow_thumb.jpg"
-import hollywood from "./Levels/hollywood_thumb.jpg"
-import space from "./Levels/space_thumb.jpg"
-import track from "./Levels/track_thumb.jpg"
-import medieval from './Levels/medieval_thumb.jpg'
+import beach from "./Levels/beach_original.jpg"
+import snow from "./Levels/snow_original.jpg"
+import hollywood from "./Levels/hollywood_original.jpg"
+import space from "./Levels/space_original.jpg"
+import track from "./Levels/track_original.jpg"
+import medieval from './Levels/medieval_original.jpg'
 
 export const thumbnail = {
   beach,

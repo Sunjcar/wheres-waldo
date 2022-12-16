@@ -10,10 +10,10 @@ import {
   } from "@mui/material"
   import React, { useCallback, useEffect, useState } from "react"
   import { Link, useNavigate } from "react-router-dom"
-  import { GameImg } from "../Images/Levels"
+  import { thumbnail } from "../Images/Thumbnail"
   import { convertTime, getDate } from "../Utils/Utils"
   import Filter from "bad-words"
-  import databaseService from "../services/database"
+  import databaseService from "../Database"
   
   const Game = ({ level, gameStart, handleGuess, found, finishTime }) => {
     const [username, setUsername] = useState("")
@@ -133,7 +133,7 @@ import {
         <Box
           ref={GameRef}
           component="img"
-          src={GameImg[level.name]}
+          src={thumbnail[level.name]}
           sx={{
             width: "90%",
             boxShadow: 10,

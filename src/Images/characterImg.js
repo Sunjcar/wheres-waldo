@@ -1,4 +1,4 @@
-import waldo from "./Characterss/waldo.svg"
+import waldo from "./Characters/waldo.svg"
 import wilma from "./Characters/wilma.svg"
 import wizard from "./Characters/wizard.svg"
 import woof from "./Characters/woof.svg"
