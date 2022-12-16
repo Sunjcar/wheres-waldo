@@ -4,7 +4,7 @@ export const PrimaryBtn = (props) => (
   <Link
     to={props.link}
     onClick={props.onClick}
-    className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-red-400 border border-transparent rounded-md hover:bg-red-500"
+    className="flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-red-400 border border-transparent rounded-md hover:bg-red-500"
   >
     {props.children}
   </Link>

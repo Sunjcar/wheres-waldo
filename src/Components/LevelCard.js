@@ -6,7 +6,7 @@ import CharacterIcon from "./CharacterIcon"
 const LevelCard = ({ level }) => {
   return (
     <div className="hover:bg-gray-300">
-      <Link to={`/playground/${level.name}`}>
+      <Link to={`/game/${level.name}`}>
         <div className="transition-shadow bg-white rounded cursor-pointer hover:shadow">
           <img
             className="object-cover w-full h-56"
@@ -15,7 +15,7 @@ const LevelCard = ({ level }) => {
         </div>
         <div className="flex items-center justify-between">
           <div className="flex justify-between p-4 align-middle">
-            <h1 className="flex-shrink-0 mr-3 font-medium lg:text-lg">
+            <h1 className="flex-shrink-0 mr-3 font-bold lg:text-lg">
               {level.name.toUpperCase()}
             </h1>
           </div>
